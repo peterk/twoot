@@ -1,0 +1,15 @@
+
+Twoot is a customizable minimal twitter client for OSX. It is based on jQuery (http://jquery.com/), Fluid (http://fluidapp.com/) and some basic HTML and CSS. The idea is to provide a native-looking application that is easy to customize to your specific needs. The twitter javascript code is based on the SeaOfClouds tweet code (see http://tweet.seaofclouds.com/).
+
+INSTALLATION
+------------
+
+Put all Twoot files in a folder somewhere. Download Fluid and create the Twoot.app by following the instructions here:
+
+http://www.peterkrantz.com/2008/twitter-client-with-fluid-and-jquery/
+
+
+LICENSE
+-------
+
+TBA
