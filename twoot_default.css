@@ -1,0 +1,43 @@
+* { margin: 0; padding: 0; }
+a { text-decoration: none; color: blue; }
+a:hover { text-decoration: underline; }
+body { font: 0.75em/1.5 'Lucida Grande', sans-serif; color: #333; background-color:#fff }
+
+/*Tweet styles*/
+li.tweet_even, li.tweet_odd {
+	padding: 0.2em 0.4em;
+	margin:0;
+}
+li.tweet_even {
+	background-color: #e6edfa;
+}
+span.user {
+	font-weight:bold;
+}
+span.time {
+	color: #666;
+}
+#message_entry {
+	background-color: #ccc;
+	margin:0;
+	padding:0;
+	position: fixed;
+	bottom: 0; left: 0;
+	z-index: 10;
+	width:100%;
+}
+form {
+	margin: 0.2em 0.4em;
+}	
+input#status {
+	width: 100%;
+}
+input#status:focus, input#status:active, a:focus, a:active
+{
+	color:#000;
+    background-color:#ffa;
+}
+
+label {
+	display:block;
+}
