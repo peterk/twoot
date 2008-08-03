@@ -16,3 +16,12 @@ LICENSE
 TBA
 
 The icon was found at http://www.iconarchive.com/show/dragon-soft-icons-by-artua/User-icon.html and is used according to the restrictions described (free for non-commercial use).
+
+
+CUSTOMIZATION
+-------------
+
+The idea is that you should adapt Twoot to fit your requirements. If you know HTML and CSS it is trivial to add a new style. Create a new folder under the style directory and add all style files (css/images) there. Don't forget to change the stylesheet link in the twoot.htm file.
+
+If you want to modify the way Twoot works, all javascript code is in the twoot.js file.
+
