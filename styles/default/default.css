@@ -18,13 +18,14 @@ span.time {
 	color: #666;
 }
 #message_entry {
-	background-color: #ccc;
+	background-color: #e8e8e8;
 	margin:0;
 	padding:0;
 	position: fixed;
 	bottom: 0; left: 0;
 	z-index: 10;
 	width:100%;
+	border-top: solid 1px #bebebe
 }
 form {
 	margin: 0.4em 0.5em;
