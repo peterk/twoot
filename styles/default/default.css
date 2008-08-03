@@ -27,10 +27,17 @@ span.time {
 	width:100%;
 }
 form {
-	margin: 0.2em 0.4em;
+	margin: 0.4em 0.5em;
 }	
 input#status {
-	width: 100%;
+	width: 99%;
+	margin-right:auto;
+	margin-left:auto;
+}
+input#send {
+	position:absolute;
+	left: -999px;
+	top: -999px;
 }
 input#status:focus, input#status:active, a:focus, a:active
 {
