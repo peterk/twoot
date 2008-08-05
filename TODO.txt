@@ -1,0 +1,16 @@
+TODO
+----
+
++ Prevent flickring on reload
++ Reload from last update instead of full feed reload (if possible via twitter api)
++ Enhance keyboard navigation
++ Aditional style matching Fluid's HUD-black. 
++ Show successful status posting by turning status field green and then fade to default color.
+
+
+DONE
+----
+
++ Break long words to prevent sideways scrolling
++ Enable automatic reload every 65 secs
++ Clicking name should initiate new message to @name in message field.
