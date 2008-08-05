@@ -11,6 +11,7 @@ TODO
 DONE
 ----
 
++ Added new icon for the default style (butterflies are more lightweight than birds...)
 + Break long words to prevent sideways scrolling
 + Enable automatic reload every 65 secs
 + Clicking name should initiate new message to @name in message field.
