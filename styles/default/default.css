@@ -1,0 +1,52 @@
+* { margin: 0; padding: 0; }
+a { text-decoration: none; color: blue; }
+a:hover { text-decoration: underline; }
+body { font: 0.75em/1.5 'Lucida Grande', sans-serif; color: #333; background-color:#fff }
+
+/*Tweet styles*/
+li.tweet_even, li.tweet_odd {
+	padding: 0.2em 0.4em;
+	margin:0;
+	word-wrap: break-word; 
+}
+li.tweet_even {
+	background-color: #e6edfa;
+}
+span.user {
+	font-weight:bold;
+}
+span.time {
+	color: #666;
+}
+#message_entry {
+	background-color: #e8e8e8;
+	margin:0;
+	padding:0;
+	position: fixed;
+	bottom: 0; left: 0;
+	z-index: 10;
+	width:100%;
+	border-top: solid 1px #bebebe
+}
+form {
+	margin: 0.4em 0.5em;
+}	
+input#status {
+	width: 99%;
+	margin-right:auto;
+	margin-left:auto;
+}
+input#send {
+	position:absolute;
+	left: -999px;
+	top: -999px;
+}
+input#status:focus, input#status:active, a:focus, a:active
+{
+	color:#000;
+    background-color:#ffa;
+}
+
+label {
+	display:block;
+}
