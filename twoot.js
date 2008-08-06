@@ -8,16 +8,12 @@
 (function($) {
  $.fn.gettweets = function(o){
  	return this.each(function(){
-		 var list = $('<ul class="tweet_list">').appendTo(this);
+		 var list = $('ul.tweet_list').appendTo(this);
 		 var url = 'http://twitter.com/statuses/friends_timeline.json';
 		 $.getJSON(url, function(data){
 			 $.each(data, function(i, item) { 
 				 list.append('<li><span class="time">' + relative_time(item.created_at) + '</span> <span class="user" onclick="addAddress(\'' + item.user.screen_name + '\')">' + item.user.screen_name + '</span><div class="tweet_text">' + item.text.replace(/(\w+:\/\/[A-Za-z0-9-_]+\.[A-Za-z0-9-_:%&\?\/.=]+)/, '<a href="$1">$1</a>').replace(/[\@]+([A-Za-z0-9-_]+)/, '<a href="http://twitter.com/$1">@$1</a>').replace(/[&lt;]+[3]/, "<tt class='heart'>&#x2665;</tt>") + '</div></li>');
 				 });
-			 $('.tweet_list li:odd').addClass('tweet_even');
-			 $('.tweet_list li:even').addClass('tweet_odd');
-			 $('.tweet_list li:first').addClass('tweet_first');
-			 $('.tweet_list li:last').addClass('tweet_last');
 			 });
 		 });
  function relative_time(time_value) {

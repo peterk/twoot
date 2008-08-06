@@ -4,12 +4,12 @@ a:hover { text-decoration: underline; }
 body { font: 0.75em/1.5 'Lucida Grande', sans-serif; color: #333; background-color:#fff }
 
 /*Tweet styles*/
-li.tweet_even, li.tweet_odd {
+.tweet_list li:nth-child(even), .tweet_list li:nth-child(odd) {
 	padding: 0.2em 0.4em;
 	margin:0;
 	word-wrap: break-word; 
 }
-li.tweet_even {
+.tweet_list li:nth-child(odd) {
 	background-color: #e6edfa;
 }
 span.user {
