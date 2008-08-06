@@ -87,6 +87,6 @@ $(document).ready(function(){
 			return false;
 		});
 
-		//set timer to reload messages every 65 secs
+		//set timer to reload messages every 70 secs
 		window.setInterval("refreshMessages()", 70000);
 });

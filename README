@@ -8,7 +8,8 @@ Put all Twoot files in a folder somewhere. Download Fluid and create the Twoot.a
 
 http://www.peterkrantz.com/2008/twitter-client-with-fluid-and-jquery/
 
-Change the username and password in twoot.js.
+As of this release you don't have to edit twoot.js to specify username and password (you will be prompted on first load and the info will be stored in your keychain).
+
 
 LICENSE
 -------
