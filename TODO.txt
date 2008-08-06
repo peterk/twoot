@@ -6,11 +6,13 @@ TODO
 + Enhance keyboard navigation
 + Aditional style matching Fluid's HUD-black. 
 + Show successful status posting by turning status field green and then fade to default color.
++ Highlight tweets newer than an hour. Fade them to default color.
 
 
 DONE
 ----
 
++ Use keychain for twitter username and password instead of editing js file.
 + Added new icon for the default style (butterflies are more lightweight than birds...)
 + Break long words to prevent sideways scrolling
 + Enable automatic reload every 65 secs

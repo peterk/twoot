@@ -4,23 +4,15 @@
  * Be aware that this was a five minute hack and verylittle cleaning has been made.
  * */
 
-var USERNAME = "username"; //your twitter account username
-var PASSWORD = "password";
-
-$.ajaxSetup({
-  username: USERNAME,
-  password: PASSWORD
-});
-
 
 (function($) {
  $.fn.gettweets = function(o){
  	return this.each(function(){
 		 var list = $('<ul class="tweet_list">').appendTo(this);
-		 var url = 'http://' + USERNAME + ':' + PASSWORD + '@twitter.com/statuses/friends_timeline.json';
+		 var url = 'http://twitter.com/statuses/friends_timeline.json';
 		 $.getJSON(url, function(data){
 			 $.each(data, function(i, item) { 
-				 list.append('<li><span class="time">' + relative_time(item.created_at) + '</span> <span class="user" onclick="addAddress(\'' + item.user.screen_name + '\')">' + item.user.screen_name + '</span><div class="tweet_text">' + item.text.replace(/(\w+:\/\/[A-Za-z0-9-_]+\.[A-Za-z0-9-_:%&\?\/.=]+)/, '<a href="$1">$1</a>').replace(/[\@]+([A-Za-z0-9-_]+)/, '<a href="http://twitter.com/$1">@$1</a>').replace(/[\#]+([A-Za-z0-9-_]+)/, '<a href="http://search.twitter.com/search?q=&tag=$1&lang=all&from='+ USERNAME +'">#$1</a>').replace(/[&lt;]+[3]/, "<tt class='heart'>&#x2665;</tt>") + '</div></li>');
+				 list.append('<li><span class="time">' + relative_time(item.created_at) + '</span> <span class="user" onclick="addAddress(\'' + item.user.screen_name + '\')">' + item.user.screen_name + '</span><div class="tweet_text">' + item.text.replace(/(\w+:\/\/[A-Za-z0-9-_]+\.[A-Za-z0-9-_:%&\?\/.=]+)/, '<a href="$1">$1</a>').replace(/[\@]+([A-Za-z0-9-_]+)/, '<a href="http://twitter.com/$1">@$1</a>').replace(/[&lt;]+[3]/, "<tt class='heart'>&#x2665;</tt>") + '</div></li>');
 				 });
 			 $('.tweet_list li:odd').addClass('tweet_even');
 			 $('.tweet_list li:even').addClass('tweet_odd');
