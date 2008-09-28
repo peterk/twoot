@@ -19,7 +19,9 @@ jQuery.fn.reverse = function() {
 		 
 		 $.getJSON(url, function(data){
 			 $.each(data.reverse(), function(i, item) { 
-				 list.prepend('<li><span class="time">' + relative_time(item.created_at) + '</span> <span class="user" onclick="addAddress(\'' + item.user.screen_name + '\')">' + item.user.screen_name + '</span><div class="tweet_text">' + item.text.replace(/(\w+:\/\/[A-Za-z0-9-_]+\.[A-Za-z0-9-_:%&\?\/.=]+)/, '<a href="$1">$1</a>').replace(/[\@]+([A-Za-z0-9-_]+)/, '<a href="http://twitter.com/$1">@$1</a>').replace(/[&lt;]+[3]/, "<tt class='heart'>&#x2665;</tt>") + '</div></li>');
+				if($("#msg-" + item.id).length == 0) { // <- fix for twitter caching which sometimes have problems with the "since" parameter
+				 	list.prepend('<li id="msg-' + item.id + '"><span class="time">' + relative_time(item.created_at) + '</span> <span class="user" onclick="addAddress(\'' + item.user.screen_name + '\')">' + item.user.screen_name + '</span><div class="tweet_text">' + item.text.replace(/(\w+:\/\/[A-Za-z0-9-_]+\.[A-Za-z0-9-_:%&\?\/.=]+)/, '<a href="$1">$1</a>').replace(/[\@]+([A-Za-z0-9-_]+)/, '<a href="http://twitter.com/$1">@$1</a>').replace(/[&lt;]+[3]/, "<tt class='heart'>&#x2665;</tt>") + '</div></li>');
+				 }
 				 });
 			 });
 		 });
