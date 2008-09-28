@@ -1,5 +1,7 @@
 
-Twoot is a customizable minimal twitter client for OSX. It is based on jQuery (http://jquery.com/), Fluid (http://fluidapp.com/) and some basic HTML and CSS. The idea is to provide a native-looking application that is easy to customize to your specific needs. The twitter javascript code is based on the SeaOfClouds tweet code (see http://tweet.seaofclouds.com/).
+Twoot is a customizable minimal twitter client for WebKit-based SSBs. It is based on jQuery (http://jquery.com/), Fluid (http://fluidapp.com/) and some basic HTML and CSS. The idea is to provide a native-looking application that is easy to customize to your specific needs. The twitter javascript code is based on the SeaOfClouds tweet code (see http://tweet.seaofclouds.com/).
+
+The code has only been tested with Fluid, but should work in Safari and other WebKit-based browsers (including the iPhone I guess).
 
 INSTALLATION
 ------------
