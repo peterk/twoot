@@ -3,16 +3,23 @@
  *
  * Be aware that this was a five minute hack and verylittle cleaning has been made.
  * */
+var LAST_UPDATE;
+
+//Reverse collection
+jQuery.fn.reverse = function() {
+  return this.pushStack(this.get().reverse(), arguments);
+}; 
 
 
 (function($) {
  $.fn.gettweets = function(o){
  	return this.each(function(){
-		 var list = $('ul.tweet_list').appendTo(this);
-		 var url = 'http://twitter.com/statuses/friends_timeline.json';
+		 var list = $('ul.tweet_list').prependTo(this);
+		 var url = 'http://twitter.com/statuses/friends_timeline.json' + getSinceParameter();
+		 
 		 $.getJSON(url, function(data){
-			 $.each(data, function(i, item) { 
-				 list.append('<li><span class="time">' + relative_time(item.created_at) + '</span> <span class="user" onclick="addAddress(\'' + item.user.screen_name + '\')">' + item.user.screen_name + '</span><div class="tweet_text">' + item.text.replace(/(\w+:\/\/[A-Za-z0-9-_]+\.[A-Za-z0-9-_:%&\?\/.=]+)/, '<a href="$1">$1</a>').replace(/[\@]+([A-Za-z0-9-_]+)/, '<a href="http://twitter.com/$1">@$1</a>').replace(/[&lt;]+[3]/, "<tt class='heart'>&#x2665;</tt>") + '</div></li>');
+			 $.each(data.reverse(), function(i, item) { 
+				 list.prepend('<li><span class="time">' + relative_time(item.created_at) + '</span> <span class="user" onclick="addAddress(\'' + item.user.screen_name + '\')">' + item.user.screen_name + '</span><div class="tweet_text">' + item.text.replace(/(\w+:\/\/[A-Za-z0-9-_]+\.[A-Za-z0-9-_:%&\?\/.=]+)/, '<a href="$1">$1</a>').replace(/[\@]+([A-Za-z0-9-_]+)/, '<a href="http://twitter.com/$1">@$1</a>').replace(/[&lt;]+[3]/, "<tt class='heart'>&#x2665;</tt>") + '</div></li>');
 				 });
 			 });
 		 });
@@ -43,11 +50,20 @@
 })(jQuery);
 
 
-function refreshMessages() {
-	if($('.tweet_list')) {
-		$('.tweet_list').empty();
+function getSinceParameter() {
+	if(LAST_UPDATE == null) {
+		return "";
+	} else {
+		return "?since=" + LAST_UPDATE;
 	}
+}
+
+
+function refreshMessages() {
+
 	$(".tweets").gettweets();
+
+	LAST_UPDATE = new Date().toGMTString();	
 	return;
 }
 

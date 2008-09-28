@@ -2,16 +2,18 @@ TODO
 ----
 
 + Prevent flickring on reload
-+ Reload from last update instead of full feed reload (if possible via twitter api)
++ Get rid of screen name and show icon instead.
 + Enhance keyboard navigation
 + Aditional style matching Fluid's HUD-black. 
 + Show successful status posting by turning status field green and then fade to default color.
 + Highlight tweets newer than an hour. Fade them to default color.
 
 
+
 DONE
 ----
 
++ Reload from last update instead of full feed reload (if possible via twitter api)
 + Use keychain for twitter username and password instead of editing js file.
 + Added new icon for the default style (butterflies are more lightweight than birds...)
 + Break long words to prevent sideways scrolling
