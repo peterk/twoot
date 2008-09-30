@@ -1,7 +1,6 @@
 TODO
 ----
 
-+ Recalculate time since message each minute.
 + Prevent flickring on reload.
 + Get rid of screen name and show icon instead.
 + Enhance keyboard navigation
@@ -14,6 +13,7 @@ TODO
 DONE
 ----
 
++ Recalculate timestamps each minute.
 + Reload from last update instead of full feed reload (if possible via twitter api)
 + Use keychain for twitter username and password instead of editing js file.
 + Added new icon for the default style (butterflies are more lightweight than birds...)
