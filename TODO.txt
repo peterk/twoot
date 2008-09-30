@@ -1,7 +1,8 @@
 TODO
 ----
 
-+ Prevent flickring on reload
++ Recalculate time since message each minute.
++ Prevent flickring on reload.
 + Get rid of screen name and show icon instead.
 + Enhance keyboard navigation
 + Aditional style matching Fluid's HUD-black. 
