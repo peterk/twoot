@@ -1,7 +1,6 @@
 TODO
 ----
 
-+ Prevent flickring on reload.
 + Get rid of screen name and show icon instead.
 + Enhance keyboard navigation
 + Aditional style matching Fluid's HUD-black. 
@@ -13,6 +12,8 @@ TODO
 DONE
 ----
 
++ Add Twoot to Twitter client registry (should display "posted via Twoot").
++ Prevent flickring on reload.
 + Recalculate timestamps each minute.
 + Reload from last update instead of full feed reload (if possible via twitter api)
 + Use keychain for twitter username and password instead of editing js file.

@@ -89,7 +89,7 @@ function addAddress(screen_name) {
 }
 
 function setStatus(status_text) {
-	$.post("http://twitter.com/statuses/update.json", { status: status_text }, function(data) { refreshStatusField(); }, "json" );
+	$.post("http://twitter.com/statuses/update.json", { status: status_text, source: "twoot" }, function(data) { refreshStatusField(); }, "json" );
 	return;
 }
 
@@ -115,7 +115,7 @@ $(document).ready(function(){
 		});
 
 		//set timer to reload messages every 70 secs
-		window.setInterval("refreshMessages()", 70000);
+		window.setInterval("refreshMessages()", 65000);
 
 		//set timer to recalc timestamps every 60 secs
 		window.setInterval("recalcTime()", 60000);
