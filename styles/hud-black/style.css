@@ -1,0 +1,57 @@
+* { margin: 0; padding: 0; }
+a { text-decoration: none; color: blue; }
+a:hover { text-decoration: underline; }
+body { font: 0.75em/1.5 'Lucida Grande', sans-serif; color: #eee; background-color:#323232 }
+
+/*Tweet styles*/
+.tweet_list li:nth-child(even), .tweet_list li:nth-child(odd) {
+	padding: 0.2em 0.4em;
+	margin:0;
+	word-wrap: break-word; 
+}
+.tweet_list li:nth-child(odd) {
+	background-color: #1f1f1f;
+}
+.tweet_text a {
+	color: #ff3;
+}
+span.user {
+	color: #e1c927;
+}
+span.time {
+	color: #aaa;
+}
+#message_entry {
+	background-image: url(bg_messagearea.png);
+	background-repeat: no-repeat;
+	background-color: #000;
+	margin:0;
+	padding:0;
+	position: fixed;
+	bottom: 0; left: 0;
+	z-index: 10;
+	width:100%;
+	border-top: solid 1px #000;
+}
+form {
+	margin: 0.4em 0.5em;
+}	
+input#status {
+	width: 99%;
+	margin-right:auto;
+	margin-left:auto;
+}
+input#send {
+	position:absolute;
+	left: -999px;
+	top: -999px;
+}
+input#status:focus, input#status:active, a:focus, a:active
+{
+	color:#000;
+    background-color:#ffa;
+}
+
+label {
+	display:block;
+}
