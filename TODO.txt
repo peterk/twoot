@@ -1,16 +1,15 @@
 TODO
 ----
 
-+ Get rid of screen name and show icon instead.
 + Enhance keyboard navigation
 + Show successful status posting by turning status field green and then fade to default color.
 + Highlight tweets newer than an hour. Fade them to default color.
 
 
-
 DONE
 ----
 
++ Added profile image example in hud-black-avatars style.
 + Aditional style matching Fluid's HUD-black. 
 + Add Twoot to Twitter client registry (should display "posted via Twoot").
 + Prevent flickring on reload.

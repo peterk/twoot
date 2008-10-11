@@ -1,32 +1,42 @@
 * { margin: 0; padding: 0; }
 a { text-decoration: none; color: blue; }
 a:hover { text-decoration: underline; }
-body { font: 0.75em/1.5 'Lucida Grande', sans-serif; color: #333; background-color:#fff }
+body { font: 0.75em/1.5 'Lucida Grande', sans-serif; color: #eee; background-color:#323232 }
 
 /*Tweet styles*/
 .tweet_list li:nth-child(even), .tweet_list li:nth-child(odd) {
-	padding: 0.2em 0.4em;
+	padding: 0.2em 0.4em 0.2em 54px; /* The 54px left margin is to allow room for the profile image */
 	margin:0;
+	min-height: 52px; /* To make sure short messages don't cut off profile image */
 	word-wrap: break-word; 
 }
 .tweet_list li:nth-child(odd) {
-	background-color: #e6edfa;
+	background-color: #1f1f1f;
 }
-span.user {
-	font-weight:bold;
+.tweet_text a {
+	color: #ff3;
+}
+img.profile_image {
+	float:left;
+	margin: 3px auto 2px -50px; /* Negative margin places the profile image in the space created by the padding in .tweet_list li */
+}
+a.user {
+	color: #e1c927;
+	text-decoration:none;
 }
 span.time {
-	color: #666;
+	color: #aaa;
 }
 #message_entry {
-	background-color: #e8e8e8;
+	background-image: url(bg_messagearea.png);
+	background-repeat: repeat-x;
+	background-color: #000;
 	margin:0;
 	padding:0;
 	position: fixed;
 	bottom: 0; left: 0;
 	z-index: 10;
 	width:100%;
-	border-top: solid 1px #bebebe
 }
 form {
 	margin: 0.4em 0.5em;
