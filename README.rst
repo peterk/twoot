@@ -9,6 +9,7 @@ The code has only been tested with Fluid, but should work in Safari and other We
 
 .. image:: http://www.peterkrantz.com/wp-content/uploads/2008/10/twoot-hud.png
 .. image:: http://www.peterkrantz.com/wp-content/uploads/2008/08/screenshot.gif
+.. image:: http://www.peterkrantz.com/wp-content/uploads/2008/10/twoot-hud-black-avatars.jpg
 
 Installation
 ------------
