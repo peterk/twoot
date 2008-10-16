@@ -9,6 +9,7 @@ TODO
 DONE
 ----
 
++ Fixed - Multiple usernames in tweet not linked.
 + Added profile image example in hud-black-avatars style.
 + Aditional style matching Fluid's HUD-black. 
 + Add Twoot to Twitter client registry (should display "posted via Twoot").
