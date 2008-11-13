@@ -1,7 +1,7 @@
 /*
  * This file is based on the jquery tweet extension by http://tweet.seaofclouds.com/
  *
- * Be aware that this was a five minute hack and verylittle cleaning has been made.
+ * Be aware that this was a five minute hack and very little cleaning has been made.
  * */
 var LAST_UPDATE;
 
@@ -21,7 +21,16 @@ jQuery.fn.reverse = function() {
 			 $.each(data.reverse(), function(i, item) { 
 				if($("#msg-" + item.id).length == 0) { // <- fix for twitter caching which sometimes have problems with the "since" parameter
 				 	list.prepend('<li id="msg-' + item.id + '"><img class="profile_image" src="' + item.user.profile_image_url + '" alt="' + item.user.name + '" /><span class="time" title="' + item.created_at + '">' + relative_time(item.created_at) + '</span> <a class="user" href="javascript:addAddress(\'' + item.user.screen_name + '\')">' + item.user.screen_name + '</a><div class="tweet_text">' + item.text.replace(/(\w+:\/\/[A-Za-z0-9-_]+\.[A-Za-z0-9-_:%&\?\/.=]+)/g, '<a href="$1">$1</a>').replace(/[\@]+([A-Za-z0-9-_]+)/g, '<a href="http://twitter.com/$1">@$1</a>').replace(/[&lt;]+[3]/g, "<tt class='heart'>&#x2665;</tt>") + '</div></li>');
-				 }
+
+					// Don't want Growl notifications? Comment out the following method call
+					fluid.showGrowlNotification({
+						title: item.user.name + " @" + item.user.screen_name,
+						description: item.text,
+						priority: 2,
+						icon: item.user.profile_image_url
+					});
+
+					}
 				 });
 			 });
 		 });

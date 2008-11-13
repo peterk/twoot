@@ -1,7 +1,8 @@
 TODO
 ----
 
-+ Enhance keyboard navigation
++ Fix linking of inline links with "~" in them (like http://c2.com/~ward/Dial-a-Door/)
++ Enhance keyboard navigation; "r" for partial update
 + Show successful status posting by turning status field green and then fade to default color.
 + Highlight tweets newer than an hour. Fade them to default color.
 
@@ -9,6 +10,7 @@ TODO
 DONE
 ----
 
++ Growl notification patch by Carl Leiby added.
 + Fixed - Multiple usernames in tweet not linked.
 + Added profile image example in hud-black-avatars style.
 + Aditional style matching Fluid's HUD-black. 
