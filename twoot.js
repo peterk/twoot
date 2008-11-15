@@ -1,7 +1,6 @@
 /*
- * This file is based on the jquery tweet extension by http://tweet.seaofclouds.com/
+ * The Twitter request code is based on the jquery tweet extension by http://tweet.seaofclouds.com/
  *
- * Be aware that this was a five minute hack and very little cleaning has been made.
  * */
 var LAST_UPDATE;
 
@@ -83,11 +82,8 @@ function getSinceParameter() {
 
 
 function refreshMessages() {
-
 	$(".tweets").gettweets();
-
 	LAST_UPDATE = new Date().toGMTString();	
-
 	return;
 }
 
@@ -128,4 +124,7 @@ $(document).ready(function(){
 
 		//set timer to recalc timestamps every 60 secs
 		window.setInterval("recalcTime()", 60000);
+
+		//Bind r key to request new messages
+		$(document).bind('keydown', {combi:'r', disableInInput: true}, refreshMessages);
 });
