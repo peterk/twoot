@@ -80,10 +80,18 @@ function getSinceParameter() {
 	}
 }
 
+function showAlert(message) {
+	$("#alert p").text(message);
+	$("#alert").fadeIn("fast");
+	return;
+}
+
 
 function refreshMessages() {
+	showAlert("Getting new tweets...");
 	$(".tweets").gettweets();
 	LAST_UPDATE = new Date().toGMTString();	
+	$("#alert").fadeOut(2000);
 	return;
 }
 

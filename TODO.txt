@@ -9,6 +9,7 @@ TODO
 DONE
 ----
 
++ Show message when fetching new tweets.
 + Enhance keyboard navigation; "r" for partial update
 + Growl notification patch by Carl Leiby added.
 + Fixed - Multiple usernames in tweet not linked.
