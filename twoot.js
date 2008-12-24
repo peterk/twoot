@@ -102,15 +102,13 @@ function addAddress(screen_name) {
 }
 
 function setStatus(status_text) {
-	$.post("http://twitter.com/statuses/update.json", { status: status_text, source: "twoot" }, function(data) { refreshStatusField(); }, "json" );
+	$.post("http://twitter.com/statuses/update.json", { status: status_text, source: "twoot" }, function(data) { checkStatus(); refreshStatusField(); }, "json" );
 	return;
 }
 
 function refreshStatusField() {
 	//maybe show some text below field with last message sent?
 	refreshMessages();
-    //check for twoosh and refresh the status 
-	checkStatus();
 	$("#status_count").text("140");
 	$('html').animate({scrollTop:0}, 'fast'); 
 	return;
@@ -123,13 +121,14 @@ function updateStatusCount() {
 }
 
 function checkStatus () {
+    var origColor = $('#status').css("background-color");
     if ($('#status').val().length == 140) {
-	    $("#status").val("Twoosh!").fadeOut('slow', function() {
-	      $("#status").val("").fadeIn('slow');
+	    $("#status").val("Twoosh!").css("background-color","#52FF55").fadeOut('slow', function() {
+	      $("#status").val("").css("background-color", origColor).fadeIn('slow');
 	    });
     } else {
-        $('#status').val($("#status").val()).fadeOut('slow', function() {
-            $('#status').val("").fadeIn('slow');
+        $('#status').val($("#status").val()).css("background-color","#52FF55").fadeOut('slow', function() {
+            $('#status').val("").css("background-color", origColor).fadeIn('slow');
         });
     }
 }
