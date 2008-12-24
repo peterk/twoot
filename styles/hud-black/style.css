@@ -32,13 +32,13 @@ body { font: 0.75em/1.5 'Lucida Grande', sans-serif; color: #eee; background-col
 	background-color: #1f1f1f;
 }
 .tweet_text a {
-	color: #AE2DFF;
+	color: #ff3;
 }
 img.profile_image {
 	display:none; /* Hide profile image */
 }
 a.user {
-	color: #E12D8C;
+	color: #e1c927;
 	text-decoration:none;
 }
 span.time {

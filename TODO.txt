@@ -1,14 +1,15 @@
 TODO
 ----
 
++ Support nanoformats for locations + inline google maps
 + Fix linking of inline links with "~" in them (like http://c2.com/~ward/Dial-a-Door/)
-+ Show successful status posting by turning status field green and then fade to default color.
 + Highlight tweets newer than an hour. Fade them to default color.
-
++ Round corners of avatars in hud black avatars theme.
 
 DONE
 ----
 
++ Show successful status posting by turning status field green and then fade to default color.
 + Show message when fetching new tweets.
 + Enhance keyboard navigation; "r" for partial update
 + Growl notification patch by Carl Leiby added.

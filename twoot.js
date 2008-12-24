@@ -132,7 +132,7 @@ function checkStatus () {
         });
     }
 }
-
+ 
 // set up basic stuff for first load
 $(document).ready(function(){
 

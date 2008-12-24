@@ -49,3 +49,8 @@ Create a comment on the `initial announcement page`_.
 .. _initial announcement page: http://www.peterkrantz.com/2008/twitter-client-with-fluid-and-jquery/
 
 
+Contribututions
+---------------
+
+Travis Jeffery
+
