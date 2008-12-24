@@ -15,8 +15,8 @@
 	</div> 
 	<div id="message_entry">
 		<form id="status_entry" method="post">
-			<label for="status">Status:</label>
-			<input type="text" name="status" maxlength="140" id="status" />
+			<label for="status">What are you doing? <div id="status_count">140</div></label>
+			<input type="text" name="status" onBlur="updateStatusCount()" onChange="updateStatusCount()" onKeyPress="updateStatusCount()" maxlength="140" id="status" />
 			<input type="submit" id="send" value="Send" />
 		</form>
 	</div>

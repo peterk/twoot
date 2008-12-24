@@ -32,13 +32,13 @@ body { font: 0.75em/1.5 'Lucida Grande', sans-serif; color: #eee; background-col
 	background-color: #1f1f1f;
 }
 .tweet_text a {
-	color: #ff3;
+	color: #AE2DFF;
 }
 img.profile_image {
 	display:none; /* Hide profile image */
 }
 a.user {
-	color: #e1c927;
+	color: #E12D8C;
 	text-decoration:none;
 }
 span.time {
@@ -72,6 +72,10 @@ input#status:focus, input#status:active, a:focus, a:active
 {
 	color:#000;
     background-color:#ffa;
+}
+
+#status_count {
+    float:right;
 }
 
 label {

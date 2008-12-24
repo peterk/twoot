@@ -109,23 +109,42 @@ function setStatus(status_text) {
 function refreshStatusField() {
 	//maybe show some text below field with last message sent?
 	refreshMessages();
-	$("#status").val("");
+    //check for twoosh and refresh the status 
+	checkStatus();
+	$("#status_count").text("140");
 	$('html').animate({scrollTop:0}, 'fast'); 
 	return;
 }
 
+function updateStatusCount() {
+    window.statusCount = 140 - $("#status").val().length;
+    $("#status_count").text(window.statusCount.toString());
+    return;
+}
+
+function checkStatus () {
+    if ($('#status').val().length == 140) {
+	    $("#status").val("Twoosh!").fadeOut('slow', function() {
+	      $("#status").val("").fadeIn('slow');
+	    });
+    } else {
+        $('#status').val($("#status").val()).fadeOut('slow', function() {
+            $('#status').val("").fadeIn('slow');
+        });
+    }
+}
 
 // set up basic stuff for first load
 $(document).ready(function(){
 
 		//get the user's messages
-		refreshMessages();
+        refreshMessages();
 
 		//add event capture to form submit
-		$("#status_entry").submit(function() {
-			setStatus($("#status").val());
-			return false;
-		});
+        $("#status_entry").submit(function() {
+         setStatus($("#status").val());
+         return false;
+        });
 
 		//set timer to reload messages every 70 secs
 		window.setInterval("refreshMessages()", 65000);
